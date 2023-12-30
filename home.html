@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honesty and Perfection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Mukta+Malar:wght@200;600&display=swap"
+    rel="stylesheet">
+    <!-- animation  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- work sans and gothic A1 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Work+Sans&display=swap" rel="stylesheet">
+
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.50);
+  }
+  #navbarSupportedContent{
+    font-family: 'Gothic A1', sans-serif;
+    /* margin-right: 10%; */
+  }
+  #navbarSupportedContent ul li a:hover{
+    color: #1807b2;
+  }
+  /* navbar list styling */
+  .navbar-collapse {
+    transition: all .7s;
+  }
+  
+  .dropdown-menu li a:hover{
+    background-color: #1807b2;
+    color: #fff !important;
+    transition: 1s;
+  }
+
+
+  @media all and (min-width: 992px) {
+    .navbar .dropdown-menu-end {
+      right: 0;
+      left: auto;
+    }
+    .navbar .nav-item .dropdown-menu {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+      margin-top: 0;
+    }
+    .navbar .dropdown-menu.fade-down {
+      top: 80%;
+      transform: rotateX(-75deg);
+      transform-origin: 0% 0%;
+    }
+    .navbar .dropdown-menu.fade-up {
+      top: 180%;
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+      transition: .5s;
+      opacity: 1;
+      visibility: visible;
+      top: 100%;
+      transform: rotateX(0deg);
+    }
+  }
+  #hoome {
+    text-decoration: underline solid 3px rgb(46, 25, 235);
+  }
+  /* background banner styling */
+  .bg-img {
+    height:700px;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  /* text-on-bannere styling */
+  .text-on-banner {
+    margin-top: 16%;
+    height: 30%;
+    width: 70%;
+    border-radius: 60px;
+    background: rgba(29, 29, 29, 0.32);
+  }
+
+  /* text-on-banner colors */
+  .text-on-banner p {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  /* responsive banner styling */
+  @media only screen and (max-width: 600px) {
+
+    /* text-on-bannere styling */
+    .text-on-banner {
+    margin-top: 70%;
+    width: 90%;
+margin-left: 5%;
+    border-radius: 60px;
+    background: rgba(29, 29, 29, 0.32);
+  }
+
+    /* text-on-banner colors */
+    .text-on-banner p {
+      color: rgba(255, 255, 255, 0.92);
+      /* font-family: Monda; */
+      font-family: 'Gothic A1', sans-serif;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 200;
+      line-height: normal;
+    }
+
+    /* services styling */
+   .WeOfferbestservices{
+    margin-bottom: -10%;
+   }
+      /* about us styling */
+
+  .btn-secondary {
+    margin-top: -10%;
+    margin-left: -90%;
+    background: #3E07B2;
+  }
+
+  .about-heading{
+    font-family: 'Gothic A1', sans-serif;
+    margin-left: 65%;
+    color: #3E07B2;
+    margin-top: -6%;
+  }
+  .not-displyaing{
+display: none;
+  }
+  /* carsds */
+  .card-position {
+    margin-top: 5% !important;
+  }
+  .card-position2{
+    margin-top: 10% !important;
+  }
+.card-position5{
+  margin-top: 10% !important;
+}
+.card-position4{
+  margin-top: 10% !important;
+}
+
+  }
+
+  /* services styling */
+  .WeOfferbestservices {
+    font-size: 50px;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    line-height: 50px;
+    /* 104.688% */
+    margin-top: 85%;
+  }
+
+  .best {
+    color: #3E07B2;
+    font-family: 'Gothic A1', sans-serif;
+  }
+
+  .honestautocare {
+    margin-top: 10%;
+  }
+
+  .view-services {
+    color: rgba(90, 85, 85, 0.76);
+    text-decoration-line: underline;
+  }
+  /* custommer styling  */
+  .custommer-text {
+    font-family: 'Gothic A1', sans-serif;
+    margin-left: 4%;
+  }
+
+  /* about us styling */
+
+  .btn-secondary {
+    margin-top: -10%;
+    margin-left: 65%;
+    background: #3E07B2;
+  }
+
+  .about-heading{
+    margin-left: 65%;
+    color: #3E07B2;
+    margin-top: -6%;
+  }
+
+  /* ervices styling */
+  .sometext {
+    text-align: center;
+    font-family: 'Gothic A1', sans-serif;
+  }
+
+  .card-title {
+    font-family: 'Gothic A1', sans-serif;
+  }
+
+  .card-text {
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  /* our services */
+  .ourservices {
+    color: rgba(62, 7, 178, 0.87);
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    /* font-family: Inter; */
+  }
+
+  /* service card styling */
+  .learn-more {
+    color: #3E07B2;
+    text-decoration: none;
+    justify-content: start !important;
+  }
+
+  .card-position {
+    margin-top: 18%;
+  }
+  .card-position2{
+    margin-top: 45%;
+  }
+.card-position5{
+  margin-top: -15%;
+}
+.card-position4{
+  margin-top: -30%;
+}
+  #immgg{
+    height: 80%;
+  }
+  /* img zoom */
+ .inner{
+  overflow: hidden;
+ }
+ .inner img{
+  transition: all 1.5s ease;
+ }
+ .inner:hover img{
+  transform: scale(1.5);
+ }
+
+  /* footer styling */
+  .footerservice {
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .partofservices {
+    list-style: none;
+    color: rgba(62, 7, 178, 0.80);
+    text-decoration: none;
+    font-family: 'Gothic A1', sans-serif;
+  }
+
+  .partofservicessss {
+    list-style: none;
+
+  }
+
+  .footer-row {
+    /* width: 100%; */
+    /* height: 330px; */
+    margin-top: 10%;
+    border-radius: 100px 100px 0px 0px;
+    border: 0px solid #000;
+    background: #ECECEC;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+
+  }
+
+  .email-text {
+    font-size: 0.8rem;
+  }
+
+  .copyright {
+    color: rgba(0, 0, 0, 0.88);
+    /* font-family: Inter; */
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  #no-em{
+    font-family: 'Work Sans', sans-serif;
+  }
+  
+    /* some media query */
+    .displying-text{
+    color: #3E07B2;
+  }
+  .abttext{
+    background-color: rgba(215, 213, 232, 0.79);
+  }
+  .displying-btn{
+    background-color: #3E07B2;
+    margin-left: 35%;
+  } 
+
+  @media only screen and (min-width: 1200px) {
+
+    .media{
+      display: none;
+    }
+  }
+
+</style>
+<!-- banner section -->
+<img class="bg-img" src="images/banner2.png" alt="">
+<!-- end banner section -->
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="images/logo2.png" class="img-fluid"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse fs-4 " id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+        <li class="nav-item mx-2">
+          <a class="nav-link active" aria-current="page" href="#" id="hoome">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link active" href="#about">About</a>
+        </li>
+        <li class="nav-item dropdown mx-2">
+          <a class="nav-link active dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end fade-down">
+            <li><a class="dropdown-item" href="cleaninf_Services.html">Cleaning</a></li>
+            <li><a class="dropdown-item" href="technical_services.html">Technical</a></li>
+            <li><a class="dropdown-item" href="#">Detailing</a></li>
+            <li><a class="dropdown-item" href="#">Rent a Car</a></li>
+            <li><a class="dropdown-item" href="#">Valet Parking</a></li>
+            <li><a class="dropdown-item" href="#">Honest Auto Care</a></li>
+          </ul>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link active" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- end navbar -->
+
+<!-- text-on-banner section -->
+<div class="container" data-aos="flip-up" data-aos-duration="3000" data-aos-delay="500">
+  <div class="row">
+    <div class="col-6 text-on-banner">
+      <p class="text-start mt-3 mb-3">"Excellence Unveiled Honesty and Perfection Group Where Quality Meets Integrity!"
+      </p>
+    </div>
+  </div>
+</div>
+<!-- end text-on-banner section -->
+
+<!-- services section -->
+<div class="container" data-aos="fade-down"
+data-aos-easing="linear"
+data-aos-duration="2000">
+  <div class="row">
+    <div class="col-lg-3">
+      <p class="WeOfferbestservices">We Offer <span class="best"> best </span> services</p>
+    </div>
+    <div class="col-lg-3 honestautocare">
+      <div class="inner">
+      <img src="images/cl.png" class="img-fluid" id="immgg">
+      </div>
+      <p class="fs-5 text-center mt-3">Detailing Services</p>
+    </div>
+    <div class="col-lg-3 honestautocare">
+      <div class="inner">
+      <img src="images/c2.png" class="img-fluid" id="immgg">
+      </div>
+      <p class="fs-5 text-center mt-3">Rent a Car service</p>
+    </div>
+    <div class="col-lg-3 honestautocare">
+      <div class="inner">
+      <img src="images/c3.png" class="img-fluid" id="immgg">
+      </div>
+      <p class="fs-5 text-center mt-3">Valet Parking Services</p>
+    </div>
+    <a class="view-services text-center mt-5 fs-2" href="#"  data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1000">View all</a>
+  </div>
+</div>
+<!-- end service section -->
+
+<!-- customer section -->
+<div class="row mt-5">
+  <div class="col-lg-5">
+    <p class="custommer-text fs-1" data-aos="flip-down" data-aos-duration="2000" >Honesty and Perfection customer </p>
+  </div>
+</div>
+<!-- end customer section -->
+
+<!-- about us section -->
+<div class="container-fluid not-displyaing">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-lg-12">
+      <h1 class="about-heading">About Us</h1>
+      <div
+        class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-350 align-items-center justify-content-center" data-aos="zoom-in-right"  data-aos-duration="2000">
+        <div class="col-auto d-none d-lg-block" >
+          <div class="inner">
+          <img
+            src="images/abtimg.png"
+            alt="Your Image Alt Text"
+            width="560"
+            height="500"
+            style="border-radius: 10px"
+          />
+          </div>
+        </div>
+        <div
+          class="col p-4 d-flex flex-column position-static" data-aos="zoom-in-left"  data-aos-duration="2000"
+          style="
+            height: 350px;
+            background-color: rgba(215, 213, 232, 0.79);">
+          <p class="mb-auto text-start fs-4 m-5" style="font-family: 'Work Sans', sans-serif;">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  </p>
+        </div>
+      </div>
+    </div>
+  </div><button type="button" class="btn btn-secondary btn-lg"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">Learn more</button>
+</div>
+
+<!-- end abut us section -->
+
+<!-- only for small screen -->
+<div class="media">
+<h1 class="text-center displying-text">About Us</h1>
+<div class="inner">
+<img src="images/abtimg.png" class="img-fluid" style="width: 90%; margin-left: 3.5%;" data-aos="fade-down" data-aos-duration="2000">
+</div>
+<p class="abttext" style="width: 90%; margin-left: 3.5%; padding: 4%;"  data-aos="fade-right" data-aos-duration="2000">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the </p>
+<button type="button" class="btn btn-primary displying-btn" data-aos="flip-left" data-aos-duration="2000" data-aos-delay="500">Learn More</button>
+</div>
+<!-- ...................... -->
+
+
+<!-- services above  section -->
+<div class="container mt-5">
+  <div class="row">
+    <p class="sometext fs-1" data-aos="flip-down" data-aos-duration="2000" >
+      We offer comprehensive
+      Automotive Services
+    </p>
+  </div>
+  <div class="row mt-4">
+    <p class="ourservices fs-3" data-aos="zoom-in-down" data-aos-duration="2000" >OUR SERVICES</p>
+  </div>
+</div>
+<!--end services above section -->
+
+<!-- services section -->
+
+<!-- first card -->
+<div class="container mt-2">
+  <div class="row row-cols-1 row-cols-md-3 g-4 ">
+    <div class="col" data-aos="zoom-out-down" data-aos-duration="2000">
+      <h5 class="card-title fs-4 text-center">Cleaning Services </h5>
+      <div class="card h-100 border-0">
+        <div class="inner">
+        <img src="images/clean.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text text-start">Honesty & Perfection Cleaning Services has grown as an established leader providing range
+            of service in cleaning environmental Care and security systems having Head Office in Dubai....</p>
+          <a class="learn-more" href="cleaninf_Services.html">see more<svg xmlns="http://www.w3.org/2000/svg" width="25"
+              height="25" viewBox="0 0 25 25" fill="none">
+              <path
+                d="M15.5023 11.0862L11.5747 7.1139C11.3936 6.92426 11.2943 6.6711 11.298 6.40892C11.3018 6.14674 11.4084 5.89652 11.5948 5.71217C11.7813 5.52781 12.0327 5.42407 12.2949 5.42327C12.5571 5.42248 12.8091 5.52471 12.9967 5.70793L18.6215 11.3969C18.7142 11.4901 18.7875 11.6006 18.8373 11.7223C18.8871 11.8439 18.9123 11.9741 18.9116 12.1055C18.9108 12.2369 18.8841 12.3669 18.833 12.488C18.7818 12.609 18.7072 12.7187 18.6135 12.8109L12.9246 18.4357C12.7341 18.6123 12.4824 18.7079 12.2228 18.7022C11.9631 18.6965 11.7159 18.59 11.5333 18.4052C11.3508 18.2205 11.2473 17.972 11.2447 17.7123C11.2422 17.4526 11.3408 17.2021 11.5196 17.0137L15.4919 13.0862L5.90608 13.0319C5.64087 13.0304 5.38712 12.9236 5.20064 12.735C5.01417 12.5464 4.91026 12.2914 4.91176 12.0262C4.91326 11.761 5.02006 11.5073 5.20866 11.3208C5.39725 11.1343 5.6522 11.0304 5.91741 11.0319L15.5023 11.0862Z"
+                fill="#3E07B2" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="col card-position" data-aos="fade-up"
+    data-aos-duration="2000">
+      <h5 class="card-title mt-3 fs-4 text-center">Technical Services</h5>
+      <div class="card h-100 border-0">
+        <div class="inner">
+        <img src="images/tech.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text">Over the years as the companies are growing tremendously and as per the market
+            competition one cannot focus on their core business as there are lot of effort and tremendous monitoring .
+          </p>
+          <a class="learn-more text-start" href="#">see more<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+              viewBox="0 0 25 25" fill="none">
+              <path
+                d="M15.5023 11.0862L11.5747 7.1139C11.3936 6.92426 11.2943 6.6711 11.298 6.40892C11.3018 6.14674 11.4084 5.89652 11.5948 5.71217C11.7813 5.52781 12.0327 5.42407 12.2949 5.42327C12.5571 5.42248 12.8091 5.52471 12.9967 5.70793L18.6215 11.3969C18.7142 11.4901 18.7875 11.6006 18.8373 11.7223C18.8871 11.8439 18.9123 11.9741 18.9116 12.1055C18.9108 12.2369 18.8841 12.3669 18.833 12.488C18.7818 12.609 18.7072 12.7187 18.6135 12.8109L12.9246 18.4357C12.7341 18.6123 12.4824 18.7079 12.2228 18.7022C11.9631 18.6965 11.7159 18.59 11.5333 18.4052C11.3508 18.2205 11.2473 17.972 11.2447 17.7123C11.2422 17.4526 11.3408 17.2021 11.5196 17.0137L15.4919 13.0862L5.90608 13.0319C5.64087 13.0304 5.38712 12.9236 5.20064 12.735C5.01417 12.5464 4.91026 12.2914 4.91176 12.0262C4.91326 11.761 5.02006 11.5073 5.20866 11.3208C5.39725 11.1343 5.6522 11.0304 5.91741 11.0319L15.5023 11.0862Z"
+                fill="#3E07B2" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="col card-position2" data-aos="zoom-out-down" data-aos-duration="2000">
+      <h5 class="card-title fs-4 text-center">Detailing Services</h5>
+      <div class="card h-100 border-0">
+        <div class="inner">
+        <img src="images/detail.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text">Over the years as the companies are growing tremendously and as per the market
+            competition one cannot focus on their core business as there are lot of effort and tremendous monitoring .
+          </p>
+          <a class="learn-more" href="#">see more<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+              viewBox="0 0 25 25" fill="none">
+              <path
+                d="M15.5023 11.0862L11.5747 7.1139C11.3936 6.92426 11.2943 6.6711 11.298 6.40892C11.3018 6.14674 11.4084 5.89652 11.5948 5.71217C11.7813 5.52781 12.0327 5.42407 12.2949 5.42327C12.5571 5.42248 12.8091 5.52471 12.9967 5.70793L18.6215 11.3969C18.7142 11.4901 18.7875 11.6006 18.8373 11.7223C18.8871 11.8439 18.9123 11.9741 18.9116 12.1055C18.9108 12.2369 18.8841 12.3669 18.833 12.488C18.7818 12.609 18.7072 12.7187 18.6135 12.8109L12.9246 18.4357C12.7341 18.6123 12.4824 18.7079 12.2228 18.7022C11.9631 18.6965 11.7159 18.59 11.5333 18.4052C11.3508 18.2205 11.2473 17.972 11.2447 17.7123C11.2422 17.4526 11.3408 17.2021 11.5196 17.0137L15.4919 13.0862L5.90608 13.0319C5.64087 13.0304 5.38712 12.9236 5.20064 12.735C5.01417 12.5464 4.91026 12.2914 4.91176 12.0262C4.91326 11.761 5.02006 11.5073 5.20866 11.3208C5.39725 11.1343 5.6522 11.0304 5.91741 11.0319L15.5023 11.0862Z"
+                fill="#3E07B2" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end first card -->
+
+<!-- seccond card -->
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col card-position4" data-aos="zoom-out-down" data-aos-duration="2000">
+      <h5 class="card-title fs-4 text-center">Rent a Car service</h5>
+      <div class="card h-100 border-0">
+        <div class="inner">
+        <img src="images/rent.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text">Green oasis Rent a Car is energy packed, ever ready to attend to its customers. We are
+            able to fulfill our commitment of the highest Standard in services with our fleet of new cars .</p>
+          <a class="learn-more" href="#">see more<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+              viewBox="0 0 25 25" fill="none">
+              <path
+                d="M15.5023 11.0862L11.5747 7.1139C11.3936 6.92426 11.2943 6.6711 11.298 6.40892C11.3018 6.14674 11.4084 5.89652 11.5948 5.71217C11.7813 5.52781 12.0327 5.42407 12.2949 5.42327C12.5571 5.42248 12.8091 5.52471 12.9967 5.70793L18.6215 11.3969C18.7142 11.4901 18.7875 11.6006 18.8373 11.7223C18.8871 11.8439 18.9123 11.9741 18.9116 12.1055C18.9108 12.2369 18.8841 12.3669 18.833 12.488C18.7818 12.609 18.7072 12.7187 18.6135 12.8109L12.9246 18.4357C12.7341 18.6123 12.4824 18.7079 12.2228 18.7022C11.9631 18.6965 11.7159 18.59 11.5333 18.4052C11.3508 18.2205 11.2473 17.972 11.2447 17.7123C11.2422 17.4526 11.3408 17.2021 11.5196 17.0137L15.4919 13.0862L5.90608 13.0319C5.64087 13.0304 5.38712 12.9236 5.20064 12.735C5.01417 12.5464 4.91026 12.2914 4.91176 12.0262C4.91326 11.761 5.02006 11.5073 5.20866 11.3208C5.39725 11.1343 5.6522 11.0304 5.91741 11.0319L15.5023 11.0862Z"
+                fill="#3E07B2" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="col card-position5"  data-aos="fade-up"
+    data-aos-duration="2000">
+      <h5 class="card-title fs-4 mt-3 text-center">Valet ParkinServices</h5>
+      <div class="card h-100 border-0">
+        <div class="inner">
+        <img src="images/vallet.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text">With this Company we reach to our customers for all their Driver needs. We supply Drivers
+            to the Hotels, Commercial Offices, Theatres etc.Our staff is skilful and efficient .</p>
+          <a class="learn-more" href="#">see more<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+              viewBox="0 0 25 25" fill="none">
+              <path
+                d="M15.5023 11.0862L11.5747 7.1139C11.3936 6.92426 11.2943 6.6711 11.298 6.40892C11.3018 6.14674 11.4084 5.89652 11.5948 5.71217C11.7813 5.52781 12.0327 5.42407 12.2949 5.42327C12.5571 5.42248 12.8091 5.52471 12.9967 5.70793L18.6215 11.3969C18.7142 11.4901 18.7875 11.6006 18.8373 11.7223C18.8871 11.8439 18.9123 11.9741 18.9116 12.1055C18.9108 12.2369 18.8841 12.3669 18.833 12.488C18.7818 12.609 18.7072 12.7187 18.6135 12.8109L12.9246 18.4357C12.7341 18.6123 12.4824 18.7079 12.2228 18.7022C11.9631 18.6965 11.7159 18.59 11.5333 18.4052C11.3508 18.2205 11.2473 17.972 11.2447 17.7123C11.2422 17.4526 11.3408 17.2021 11.5196 17.0137L15.4919 13.0862L5.90608 13.0319C5.64087 13.0304 5.38712 12.9236 5.20064 12.735C5.01417 12.5464 4.91026 12.2914 4.91176 12.0262C4.91326 11.761 5.02006 11.5073 5.20866 11.3208C5.39725 11.1343 5.6522 11.0304 5.91741 11.0319L15.5023 11.0862Z"
+                fill="#3E07B2" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- end seccond card -->
+
+<!-- end services section  -->
+
+<!-- footer section -->
+<footer class="mt-5">
+  <div class="row footer-row" style="font-family: 'Gothic A1', sans-serif;">
+    <div class="col-lg-3  mt-5 text-center" data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000">
+      <img src="images/footer logo.png" class="img-fluid" alt="">
+    </div>
+    <div class="col-lg-2 offset-lg-2 mt-5">
+      <ul class="partofservices">
+        <li class="footerservice">Menu
+        </li>
+        <li class="mt-2">
+          Home
+        </li>
+        <li>
+          Services
+        </li>
+        <li>
+          About Us
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-2 mt-5">
+      <ul class="partofservices">
+        <li class="footerservice">Support</li>
+        <li class="mt-2">
+          Help
+        </li>
+        <li>
+          FAQ
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-2 mt-5" id="no-em">
+      <ul class="partofservicessss">
+        <li class="footerservice">
+          Contact Us
+        </li>
+        <li class="mt-3 email-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path
+              d="M11.8313 12.5C10.7779 12.5 9.69792 12.2362 8.59125 11.7087C7.48458 11.1808 6.45458 10.4402 5.50125 9.48688C4.55542 8.53312 3.81875 7.505 3.29125 6.4025C2.76375 5.3 2.5 4.22208 2.5 3.16875C2.5 2.98125 2.5625 2.82292 2.6875 2.69375C2.8125 2.56458 2.96875 2.5 3.15625 2.5H4.70187C4.87187 2.5 5.02021 2.55354 5.14687 2.66062C5.27354 2.76771 5.35917 2.90479 5.40375 3.07187L5.71375 4.5625C5.74292 4.7375 5.73771 4.89021 5.69812 5.02063C5.65896 5.15104 5.58979 5.25792 5.49062 5.34125L4.11875 6.62C4.37542 7.08583 4.65896 7.51833 4.96938 7.9175C5.27979 8.31708 5.61104 8.69562 5.96313 9.05312C6.32563 9.41562 6.71604 9.75312 7.13438 10.0656C7.55271 10.3777 8.01188 10.6723 8.51188 10.9494L9.84875 9.58875C9.95042 9.47917 10.0648 9.40688 10.1919 9.37187C10.319 9.33729 10.4594 9.33042 10.6131 9.35125L11.9281 9.62C12.0977 9.66167 12.2354 9.74708 12.3413 9.87625C12.4471 10.0058 12.5 10.1544 12.5 10.3219V11.8438C12.5 12.0313 12.4354 12.1875 12.3063 12.3125C12.1771 12.4375 12.0188 12.5 11.8313 12.5Z"
+              fill="#3E07B2" />
+          </svg>
+          +916316532314<br>
+        </li>
+        <li class="email-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path
+              d="M2.5 12.5C2.15625 12.5 1.86208 12.3777 1.6175 12.1331C1.37292 11.8885 1.25042 11.5942 1.25 11.25V3.75C1.25 3.40625 1.3725 3.11208 1.6175 2.8675C1.8625 2.62292 2.15667 2.50042 2.5 2.5H12.5C12.8438 2.5 13.1381 2.6225 13.3831 2.8675C13.6281 3.1125 13.7504 3.40667 13.75 3.75V11.25C13.75 11.5938 13.6277 11.8881 13.3831 12.1331C13.1385 12.3781 12.8442 12.5004 12.5 12.5H2.5ZM7.5 8.125L2.5 5V11.25H12.5V5L7.5 8.125ZM7.5 6.875L12.5 3.75H2.5L7.5 6.875ZM2.5 5V3.75V11.25V5Z"
+              fill="#3E07B2" />
+          </svg> email:info@mahas.com
+        </li>
+      </ul>
+    </div>
+    <div class="row text-center mt-5">
+      <p class="copyright">Copyright Honesty & Perfection © 2023 | All rights reserved | Developed by <a href="https://www.orbittechnologys.com/" target="_blank">Orbit Technologies</a></p>
+    </div>
+  </div>
+</footer>
+<!-- end footer section -->
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
